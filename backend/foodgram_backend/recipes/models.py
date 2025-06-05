@@ -153,6 +153,11 @@ class UserRecipeRelationBase(models.Model):
         on_delete=models.CASCADE,
         verbose_name='Рецепт'
     )
+    # Дата добавления для избранного и списка покупок
+    added_date = models.DateTimeField(
+        verbose_name='Дата добавления',
+        auto_now_add=True
+    )
 
     class Meta:
         abstract = True
